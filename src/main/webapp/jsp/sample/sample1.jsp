@@ -12,7 +12,7 @@ var gridRow = 19;
 $(document).ready(function () {
 	/* dash(-)로 구분되는 날짜 포맷터 */
 	
-	console.log(ax5.ui.grid.formatter);
+	//console.log(ax5.ui.grid.formatter);
 	
 	ax5.ui.grid.formatter["nvl"] = function () {
 		var data = this.value;
@@ -81,12 +81,27 @@ $(document).ready(function () {
 	            }
              }
             },   */
-            {key: "empNo", label: "<strong>사원번호</strong>", formatter: "nvl", align: "center"},
-            {key: "empName", label: "사원명", formatter: "nvl", align: "center"},
-            {key: "authClsNm", label: "사원권한", formatter: "nvl", align: "center"},
-            {key: "joinDate", label: "입사일자", formatter: "date", align: "center"},
-            {key: "empPhotCntt", label: "핸드폰번호", formatter: "nvl", align: "center"},
-            {key: "homeAddr", label: "주소", formatter: "nvl", align: "center"}
+	    	{key: "loginId", label: "<strong>loginId</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "userNm", label: "<strong>userNm</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "empNo", label: "<strong>empNo</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "addr", label: "<strong>addr</strong>", formatter: "nvl", align: "center"},   
+	    	{key: "frontRegNo", label: "<strong>frontRegNo</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "gender", label: "<strong>gender</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "email", label: "<strong>email</strong>", formatter: "nvl", align: "center"},          
+	    	{key: "telNum", label: "<strong>telNum</strong>", formatter: "nvl", align: "center"},     
+	    	{key: "emerTelNum", label: "<strong>emerTelNum</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "entrDt", label: "<strong>entrDt</strong>", formatter: "nvl", align: "center"},  
+	    	{key: "resingDt", label: "<strong>resingDt</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "deptCd", label: "<strong>deptCd</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "gradeCd", label: "<strong>gradeCd</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "lvlEdu", label: "<strong>lvlEdu</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "major", label: "<strong>major</strong>", formatter: "nvl", align: "center"},  
+	    	{key: "marrYn", label: "<strong>marrYn</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "salClas", label: "<strong>salClas</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "fstRegDttm", label: "<strong>fstRegDttm</strong>", formatter: "nvl", align: "center"},        
+	    	{key: "fstRgstEmpNo", label: "<strong>fstRgstEmpNo</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "lstChgDttm", label: "<strong>lstChgDttm</strong>", formatter: "nvl", align: "center"},        
+	    	{key: "lstChgEmpNo", label: "<strong>lstChgEmpNo</strong>", formatter: "nvl", align: "center"} 
             
             
         ],
@@ -121,14 +136,13 @@ function search(_gridPage) {
 	//페이지 넘겨받음
 	gridPage = _gridPage;
 	
-	var empMngControllerVo = new Object();
-	var empMngVo = new Object();
-	var empMngVoList = new Array();
+	var empMngVo = {};
+	var tbi1000 = {};
+	var empMngVoList = [];
 
-	empMngVo["gridPage"] = gridPage;
-	empMngVo["gridRow"] = gridRow;
-	empMngControllerVo["empMngVo"] = empMngVo;
-
+	tbi1000["gridPage"] = gridPage;
+	tbi1000["gridRow"] = gridRow;
+	empMngVo["tbi1000"] = tbi1000;
 	
 	
 	$.ajax({
@@ -136,21 +150,20 @@ function search(_gridPage) {
 		dataType : "json",
 		contentType : "application/json",
 		async : true,
-		data : JSON.stringify(empMngControllerVo),
+		data : JSON.stringify(empMngVo),
 		url : "/plum/sample/sample1",
 		success : function(data) {
 			
-			console.log(data);
+			//console.log(data.tbi1000List1);
 
 			firstGrid.setData(
 					{
 				        list: data.tbi1000List1,
 				        page: {
 				            currentPage: gridPage,
-				            pageSize: gridRow
-// 				            ,
-// 				            totalElements: data.tbi1000List1[0].totCnt,
-// 				            totalPages: data.empMngVoList[0].totPage
+				            pageSize: gridRow,
+				            totalElements: data.tbi1000List1[0].totCnt,
+				            totalPages: data.tbi1000List1[0].totPage
 				        }
 				    }
 				);

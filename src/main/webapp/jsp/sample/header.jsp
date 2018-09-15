@@ -11,9 +11,9 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-kernel/master/dist/ax5ui.all.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css" />
 		
-		<link href="/resources/custom.css" rel="stylesheet" type="text/css">
+		<link href="./resources/custom.css" rel="stylesheet" type="text/css">
 		
-		<script src="/js/common/common.js"></script>				
+		<script src="./js/common/common.js"></script>				
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

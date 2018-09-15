@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.plum.sample.controller.ISampleController;
-import com.plum.sample.model.SampleVo;
+import com.plum.sample.model.EmpMngVo;
 import com.plum.sample.model.TBI1000;
 import com.plum.sample.service.SampleService;
 
@@ -31,11 +31,15 @@ public class SampleController implements ISampleController {
 	}
 
 	@Override
-	public @ResponseBody SampleVo sample1( @RequestBody SampleVo inVo) {
+	public @ResponseBody EmpMngVo sample1( @RequestBody EmpMngVo inVo) {
+		
+		
+		
+		log.info(inVo.toString());
 	
 		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
 		List<TBI1000> list = new ArrayList<TBI1000>();
-		SampleVo sampleVo = new SampleVo();
+		EmpMngVo sampleVo = new EmpMngVo();
 		// 리스트가져와서 담음
 		list = sampleService.selectSample1(inVo.getTbi1000());
 		
