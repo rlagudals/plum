@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.plum.cmn.mapper.LoginMapper">
+
+	<!-- 로그인권한조회 -->
+    <select id="getLoginAuth" resultType="com.plum.cmn.model.TB0000">
+	SELECT LOGIN_ID
+	     , LOGIN_PWD
+	     , USER_NM
+	     , FRONT_REG_NO
+	     , FST_REG_DTTM
+	  FROM TB_M0000
+	 WHERE 1 = 1
+	   AND LOGIN_ID = #{loginId}
+	   AND LOGIN_PWD = #{loginPwd}
+    </select> 
+</mapper>

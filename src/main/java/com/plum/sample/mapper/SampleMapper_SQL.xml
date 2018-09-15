@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.plum.sample.mapper.SampleMapper">
+
+	<!-- 로그인권한조회 -->
+    <select id="selectSample1" resultType="com.plum.sample.model.TBI1000">
+	SELECT LOGIN_ID
+	     ,USER_NM
+	     ,EMP_NO
+	     ,ADDR
+	     ,FRONT_REG_NO
+	     ,GENDER
+	     ,EMAIL
+	     ,TEL_NUM
+	     ,EMER_TEL_NUM
+	     ,ENTR_DT
+	     ,RESING_DT
+	     ,DEPT_CD
+	     ,GRADE_CD
+	     ,LVL_EDU
+	     ,MAJOR
+	     ,MARR_YN
+	     ,SAL_CLAS
+	     ,FST_REG_DTTM
+	     ,FST_RGST_EMP_NO
+	     ,LST_CHG_DTTM LST_CHG_EMP_NO
+	  FROM TB_I1000
+    </select> 
+</mapper>
