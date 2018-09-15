@@ -11,9 +11,9 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-kernel/master/dist/ax5ui.all.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.css" />
 		
-		<link href="/resources/custom.css" rel="stylesheet" type="text/css">
+		<link href="./resources/custom.css" rel="stylesheet" type="text/css">
 		
-		<script src="/js/common/common.js"></script>				
+		<script src="./js/common/common.js"></script>				
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -42,8 +42,8 @@
 		</div>
 		<div class="col-xs-2 left">
 			<ul>
-				<li onclick="common.sample('1');">AX5UI Grid 샘플(샘플1)</li>
-				<li onclick="common.sample('2');">샘플(샘플2)</a></li>
+				<li onclick="common.sample('1');">AX5UI Grid 조회(샘플1)</li>
+				<li onclick="common.sample('2');">AX5UI Grid update(샘플2)</a></li>
 				<li onclick="common.sample('3');">샘플(샘플3)</a></li>
 			</ul>
 		</div>

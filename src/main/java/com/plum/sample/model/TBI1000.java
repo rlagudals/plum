@@ -7,6 +7,11 @@ import lombok.Data;
 @Data
 public class TBI1000 extends CmnModel {
 
+	private String gridPage;
+	private String gridRow;
+	private String totCnt;
+	private String totPage;
+	
 	private String loginId;
 	private String userNm;
 	private String empNo;

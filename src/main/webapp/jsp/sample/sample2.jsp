@@ -36,15 +36,15 @@ $(document).ready(function () {
 		}
 	};
 	
-	ax5.ui.grid.formatter["user_nvl_data"] = function() {
-		var data = this.value;
+// 	formatter["user_nvl_data"] = function() {
+// 		var data = this.value;
 		
-		if(date == '') {
-			return '-'
-		} else {
-			return data;
-		}
-	};	
+// 		if(date == '') {
+// 			return '-'
+// 		} else {
+// 			return data;
+// 		}
+// 	};	
 
 	/* 그리드 객체 생성 */
 	firstGrid = new ax5.ui.grid();
@@ -56,7 +56,7 @@ $(document).ready(function () {
 	    target: $('[data-ax5grid="first-grid"]'),
 
         showLineNumber: true,
-        showRowSelector: false,
+        showRowSelector: true,
         multipleSelect: false,
         lineNumberColumnWidth: 40,
         rowSelectorColumnWidth: 27,
@@ -84,7 +84,7 @@ $(document).ready(function () {
 	    	{key: "loginId", label: "<strong>loginId</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "userNm", label: "<strong>userNm</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "empNo", label: "<strong>empNo</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "addr", label: "<strong>addr</strong>", formatter: "nvl", align: "center"},   
+	    	{key: "addr", label: "<strong>addr</strong>", formatter: "nvl", align: "center" , editor: {type: "text"} },   
 	    	{key: "frontRegNo", label: "<strong>frontRegNo</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "gender", label: "<strong>gender</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "email", label: "<strong>email</strong>", formatter: "nvl", align: "center"},          
@@ -119,7 +119,8 @@ $(document).ready(function () {
 	    },
 		body: { 
  			onDBLClick: function(){
- 				common.pageMove("empmng/empinfo",this.list[this.dindex]);
+ 				console.log(this.list[this.dindex]);
+ 				//common.pageMove("empmng/empinfo",this.list[this.dindex]);
  			},
  	 	    onClick: function(){
             
