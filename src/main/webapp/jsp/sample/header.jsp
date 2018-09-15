@@ -42,8 +42,8 @@
 		</div>
 		<div class="col-xs-2 left">
 			<ul>
-				<li onclick="common.sample('1');">AX5UI Grid 샘플(샘플1)</li>
-				<li onclick="common.sample('2');">샘플(샘플2)</a></li>
+				<li onclick="common.sample('1');">AX5UI Grid 조회(샘플1)</li>
+				<li onclick="common.sample('2');">AX5UI Grid update(샘플2)</a></li>
 				<li onclick="common.sample('3');">샘플(샘플3)</a></li>
 			</ul>
 		</div>
