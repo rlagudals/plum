@@ -44,7 +44,7 @@ SELECT CEIL(A1.TOT_CNT / #{gridRow}) AS TOT_PAGE
              , TEL_NUM
              , EMER_TEL_NUM
              , ENTR_DT
-             , RESING_DT
+             , RESING_DT     
              , DEPT_CD
              , GRADE_CD
              , LVL_EDU
