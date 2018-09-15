@@ -137,7 +137,7 @@ function search(_gridPage) {
 		contentType : "application/json",
 		async : true,
 		data : JSON.stringify(empMngControllerVo),
-		url : "/sample/sample1",
+		url : "/plum/sample/sample1",
 		success : function(data) {
 			
 			console.log(data);
