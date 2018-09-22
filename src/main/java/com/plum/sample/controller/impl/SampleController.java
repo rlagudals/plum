@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.plum.sample.controller.ISampleController;
 import com.plum.sample.model.EmpMngVo;
 import com.plum.sample.model.TBI1000;
+import com.plum.sample.model.TBI2000;
 import com.plum.sample.service.SampleService;
 
 import lombok.extern.log4j.Log4j2;
@@ -22,18 +23,16 @@ public class SampleController implements ISampleController {
 
 	@Autowired
 	SampleService sampleService;
-	
-	
+		
 	@Override
-	public String sample(@RequestParam String pageno) {
+	public String sample(@RequestParam String pagenm) {
 
-		return "/sample/sample" + pageno + ".jsp";
+		// pageno : url
+		return "/sample/" + pagenm + ".jsp";
 	}
 
 	@Override
-	public @ResponseBody EmpMngVo sample1( @RequestBody EmpMngVo inVo) {
-		
-		
+	public @ResponseBody EmpMngVo empmng(@RequestBody EmpMngVo inVo) {
 		
 		log.info(inVo.toString());
 	
@@ -49,5 +48,22 @@ public class SampleController implements ISampleController {
 		
 		return sampleVo;
 	}
-
+	
+	@Override
+	public @ResponseBody EmpMngVo lvledu(@RequestBody EmpMngVo inVo) {
+		
+		log.info(inVo.toString());
+	
+		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
+		List<TBI2000> lvlEdulist = new ArrayList<TBI2000>();
+		EmpMngVo sampleVo = new EmpMngVo();
+		// 리스트가져와서 담음
+		lvlEdulist = sampleService.selectLvlEdu(inVo.getTbi2000());
+		
+		log.info(lvlEdulist.toString());
+		
+		sampleVo.setTbi2000List(lvlEdulist); 
+		
+		return sampleVo;
+	}
 }
