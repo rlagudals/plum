@@ -35,7 +35,7 @@ $(document).ready(function () {
         rowSelectorColumnWidth: 27,
         columnMinWidth : 160,
 	    columns: [    	
-	    			{key: "empNo", label: "<strong>사원번호</strong>", formatter: "nvl", align: "center"}, 
+	    			{key: "empNo", label: "<strong>사원번호</strong>", formatter: "nvl", align: "left"}, 
 			    	{key: "userNm", label: "<strong>사원명</strong>", formatter: "nvl", align: "left"}, 
 			    	{key: "lvlEdu", label: "<strong>E-Mail</strong>", formatter: "nvl", align: "left"},          
 			    	{key: "major", label: "<strong>전공</strong>", formatter: "nvl", align: "left"},     
@@ -52,6 +52,9 @@ $(document).ready(function () {
 		            onChange: function () {
 		            	search(this.page.selectPage);
 		            }
+	    },
+	    header: {
+	        align: "center"
 	    },
 		body: { 
  			onDBLClick: function(){

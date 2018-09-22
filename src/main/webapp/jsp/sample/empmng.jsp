@@ -95,9 +95,9 @@ $(document).ready(function () {
              }
             },   */
 	    	{key: "loginId", label: "<strong>아이디</strong>", formatter: "nvl", align: "left", width : 100}, 
-	    	{key: "userNm", label: "<strong>사원명</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "empNo", label: "<strong>사원번호</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "addr", label: "<strong>주소</strong>", formatter: "nvl", align: "center"},   
+	    	{key: "userNm", label: "<strong>사원명</strong>", formatter: "nvl", align: "left" , width : 100}, 
+	    	{key: "empNo", label: "<strong>사원번호</strong>", formatter: "nvl", align: "left" , width : 100}, 
+	    	{key: "addr", label: "<strong>주소</strong>", formatter: "nvl", align: "left", width : 100},   
 	    	{key: "frontRegNo", label: "<strong>생년월일</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "gender", label: "<strong>성별</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "email", label: "<strong>E-Mail</strong>", formatter: "nvl", align: "center"},          
@@ -129,6 +129,9 @@ $(document).ready(function () {
             	search(this.page.selectPage);
             }
 	    },
+	    header: {
+	        align: "center"
+	    },
 		body: { 
  			onDBLClick: function(){
  				common.pageMove("empmng/empinfo",this.list[this.dindex]);
@@ -139,7 +142,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	//search(gridPage);	
+	search(gridPage);	
 });
 
 /*사원정보 조회 */
