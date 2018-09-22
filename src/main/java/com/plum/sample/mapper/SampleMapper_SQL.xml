@@ -57,6 +57,15 @@
 	             , LST_CHG_EMP_NO
 	          FROM TB_I1000
 	         WHERE 1 = 1 
+	           <if test="userNm != null and userNm != ''">
+               AND USER_NM LIKE '%' || #{userNm} || '%'
+          	   </if>
+          	   <if test="loginId != null and loginId != ''">
+               AND LOGIN_ID LIKE '%' || #{loginId} || '%'
+          	   </if>
+          	   <if test="entrDt1 != null and entrDt1 != '' and entrDt2 != null and entrDt2 != ''">
+          	   AND ENTR_DT BETWEEN #{entrDt1} AND #{entrDt2}
+               </if>
 	         ORDER BY EMP_NO
 	         ) A1
 	 WHERE 1 = 1

@@ -110,12 +110,7 @@ $(document).ready(function () {
 	    	{key: "lvlEdu", label: "<strong>학력</strong>", formatter: "nvl", align: "center"}, 
 	    	{key: "major", label: "<strong>전공</strong>", formatter: "nvl", align: "center"},  
 	    	{key: "marrYn", label: "<strong>결혼여부</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "salClas", label: "<strong>호봉</strong>", formatter: "nvl", align: "center"}
-	    	//, 
-	    	//{key: "fstRegDttm", label: "<strong>fstRegDttm</strong>", formatter: "nvl", align: "center"},        
-	    	//{key: "fstRgstEmpNo", label: "<strong>fstRgstEmpNo</strong>", formatter: "nvl", align: "center"}, 
-	    	//{key: "lstChgDttm", label: "<strong>lstChgDttm</strong>", formatter: "nvl", align: "center"},        
-	    	//{key: "lstChgEmpNo", label: "<strong>lstChgEmpNo</strong>", formatter: "nvl", align: "center"}        
+	    	{key: "salClas", label: "<strong>호봉</strong>", formatter: "nvl", align: "center"}  
         ],
 	    page: {
             navigationItemCount: 9,
@@ -151,15 +146,23 @@ function search(_gridPage) {
 	//페이지 넘겨받음
 	gridPage = _gridPage;
 	
+	var sNm = $("[id=txtName]").val();
+	var sId = $("[id=txtId]").val();
+	var sEntrDt1 = $("[id=dtFromDt]").val();
+	var sEntrDt2 = $("[id=dtToDt]").val();
+		
 	var empMngVo = {};
 	var tbi1000 = {};
 	var empMngVoList = [];
 
 	tbi1000["gridPage"] = gridPage;
 	tbi1000["gridRow"] = gridRow;
+	tbi1000["userNm"] = sNm;
+	tbi1000["loginId"] = sId;
+	tbi1000["entrDt1"] = sEntrDt1;
+	tbi1000["entrDt2"] = sEntrDt2;
 	empMngVo["tbi1000"] = tbi1000;
-	
-	
+			
 	$.ajax({
 		type : "POST",
 		dataType : "json",
@@ -168,15 +171,24 @@ function search(_gridPage) {
 		data : JSON.stringify(empMngVo),
 		url : "/plum/sample/empmng",
 		success : function(data) {
-			//console.log(data.tbi1000List1);
+			
+			console.log(data);
+			
+			var totCnt = 0;
+			var totPage = 0; 
+			if (data.tbi1000List1[0] !== undefined) {
+				totCnt = data.tbi1000List1[0].totCnt;
+				totPage = data.tbi1000List1[0].totPage;
+			}
+			    			
 			firstGrid.setData(
 					{
 				        list: data.tbi1000List1,
 				        page: {
 				            currentPage: gridPage,
 				            pageSize: gridRow,
-				            totalElements: data.tbi1000List1[0].totCnt,
-				            totalPages: data.tbi1000List1[0].totPage
+				            totalElements: totCnt,
+				            totalPages: totPage
 				        }
 				    }
 				);
@@ -185,14 +197,32 @@ function search(_gridPage) {
 			alert('다시 한 번 입력해주세요 에러에러');
 		}
 	});	
-
-
 };	
 </script>
-<div style="height:10px;"></div>
 <div>
-	<button onclick="search(0);">조회</button>
+	<table>
+		<tr height="10" rowspan="17"></tr>
+		<tr>
+			<td><label>사원명</label></td>
+			<td width="5"></td>
+			<td><input type="text" id="txtName" value="박다윤"></td>
+			<td width="20"></td>		
+			<td><label>아이디</label></td>
+			<td width="5"></td>
+			<td><input type="text" id="txtId"></td>
+			<td width="20"></td>		
+			<td><label>조회기간</label></td>
+			<td width="5"></td>
+			<td><input type="text" id="dtFromDt" value="20101010"></td>
+			<td width="5"></td>
+			<td><label>~</label></td>
+			<td width="5"></td>
+			<td><input type="text" id="dtToDt" value="20101014"></td>
+			<td width="20"></td>	
+			<td><button onclick="search(0);">조회</button></td>
+		</tr>
+		<tr height="10" rowspan="17"></tr>
+	</table>
 </div>
-<div style="height:10px;"></div>
 <div data-ax5grid="first-grid" data-ax5grid-config="{}" style="width:100%; height:600px;"></div>
 </html>
