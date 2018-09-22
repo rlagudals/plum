@@ -4,6 +4,7 @@
 <html lang="ko">
 	<%@include file="./header.jsp" %>
 <script type="text/javascript">
+//<![CDATA
 var firstGrid = {};
 var gridPage = 0;
 var gridRow = 19;
@@ -27,20 +28,6 @@ $(document).ready(function () {
 			var date = this.value;
 			if(date.length == 8) {
 				return date.substr(0, 4) + "-" + date.substr(4, 2) + "-" + date.substr(6);
-			} else {
-				return "-";
-			}
-		}else{
-			return "-";
-		}
-	};
-	
-	// 연락처
-	ax5.ui.grid.formatter["phone_num"] = function() {
-		if (this.value != null){
-			var date = this.value;
-			if(date.length == 8) {
-				return date.substr(0, 3) + "-" + date.substr(4, 8) + "-" + date.substr(8,12);
 			} else {
 				return "-";
 			}
@@ -94,28 +81,29 @@ $(document).ready(function () {
 	            }
              }
             },   */
-	    	{key: "loginId", label: "<strong>아이디</strong>", formatter: "nvl", align: "left", width : 100}, 
-	    	{key: "userNm", label: "<strong>사원명</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "empNo", label: "<strong>사원번호</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "addr", label: "<strong>주소</strong>", formatter: "nvl", align: "center"},   
-	    	{key: "frontRegNo", label: "<strong>생년월일</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "gender", label: "<strong>성별</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "email", label: "<strong>E-Mail</strong>", formatter: "nvl", align: "center"},          
-	    	{key: "telNum", label: "<strong>연락처</strong>", formatter: "phone_num", align: "center"},     
-	    	{key: "emerTelNum", label: "<strong>비상연락처</strong>", formatter: "phone_num", align: "center"}, 
-	    	{key: "entrDt", label: "<strong>입사일자</strong>", formatter: "date", align: "center"},  
-	    	{key: "resingDt", label: "<strong>퇴사일자</strong>", formatter: "date", align: "center"}, 
-	    	{key: "deptCd", label: "<strong>부서</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "gradeCd", label: "<strong>직급</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "lvlEdu", label: "<strong>학력</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "major", label: "<strong>전공</strong>", formatter: "nvl", align: "center"},  
-	    	{key: "marrYn", label: "<strong>결혼여부</strong>", formatter: "nvl", align: "center"}, 
-	    	{key: "salClas", label: "<strong>호봉</strong>", formatter: "nvl", align: "center"}
-	    	//, 
-	    	//{key: "fstRegDttm", label: "<strong>fstRegDttm</strong>", formatter: "nvl", align: "center"},        
-	    	//{key: "fstRgstEmpNo", label: "<strong>fstRgstEmpNo</strong>", formatter: "nvl", align: "center"}, 
-	    	//{key: "lstChgDttm", label: "<strong>lstChgDttm</strong>", formatter: "nvl", align: "center"},        
-	    	//{key: "lstChgEmpNo", label: "<strong>lstChgEmpNo</strong>", formatter: "nvl", align: "center"}        
+	    	{key: "loginId", label: "<strong>loginId</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "userNm", label: "<strong>userNm</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "empNo", label: "<strong>empNo</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "addr", label: "<strong>addr</strong>", formatter: "nvl", align: "center"},   
+	    	{key: "frontRegNo", label: "<strong>frontRegNo</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "gender", label: "<strong>gender</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "email", label: "<strong>email</strong>", formatter: "nvl", align: "center"},          
+	    	{key: "telNum", label: "<strong>telNum</strong>", formatter: "nvl", align: "center"},     
+	    	{key: "emerTelNum", label: "<strong>emerTelNum</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "entrDt", label: "<strong>entrDt</strong>", formatter: "nvl", align: "center"},  
+	    	{key: "resingDt", label: "<strong>resingDt</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "deptCd", label: "<strong>deptCd</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "gradeCd", label: "<strong>gradeCd</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "lvlEdu", label: "<strong>lvlEdu</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "major", label: "<strong>major</strong>", formatter: "nvl", align: "center"},  
+	    	{key: "marrYn", label: "<strong>marrYn</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "salClas", label: "<strong>salClas</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "fstRegDttm", label: "<strong>fstRegDttm</strong>", formatter: "nvl", align: "center"},        
+	    	{key: "fstRgstEmpNo", label: "<strong>fstRgstEmpNo</strong>", formatter: "nvl", align: "center"}, 
+	    	{key: "lstChgDttm", label: "<strong>lstChgDttm</strong>", formatter: "nvl", align: "center"},        
+	    	{key: "lstChgEmpNo", label: "<strong>lstChgEmpNo</strong>", formatter: "nvl", align: "center"} 
+            
+            
         ],
 	    page: {
             navigationItemCount: 9,
@@ -139,7 +127,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	//search(gridPage);	
+	search(gridPage);	
 });
 
 /*사원정보 조회 */
@@ -163,9 +151,11 @@ function search(_gridPage) {
 		contentType : "application/json",
 		async : true,
 		data : JSON.stringify(empMngVo),
-		url : "/plum/sample/empmng",
+		url : "/plum/sample/sample1",
 		success : function(data) {
+			
 			//console.log(data.tbi1000List1);
+
 			firstGrid.setData(
 					{
 				        list: data.tbi1000List1,
@@ -184,12 +174,15 @@ function search(_gridPage) {
 	});	
 
 
-};	
-</script>
-<div style="height:10px;"></div>
-<div>
-	<button onclick="search(0);">조회</button>
-</div>
-<div style="height:10px;"></div>
+};
+//]]>		
+	</script>
+	
+
+	
+<h3>AX5UI Grid <button onclick="search(0);">조회</button></h3>
 <div data-ax5grid="first-grid" data-ax5grid-config="{}" style="width:100%; height:600px;"></div>
+
+</div><!-- .index -->
+
 </html>
