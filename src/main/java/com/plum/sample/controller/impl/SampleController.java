@@ -49,7 +49,7 @@ public class SampleController implements ISampleController {
     */
 	
 	@Override
-	public @ResponseBody EmpMngVo empmng(EmpMngVo inVo) {
+	public @ResponseBody EmpMngVo empmng(@RequestBody EmpMngVo inVo) {
 		log.info(inVo.toString());
 		
 		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언

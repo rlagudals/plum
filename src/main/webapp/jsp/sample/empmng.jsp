@@ -176,14 +176,14 @@ function search(_gridPage) {
 			
 			var totCnt = 0;
 			var totPage = 0; 
-			if (data.tbi1000List1[0] !== undefined) {
-				totCnt = data.tbi1000List1[0].totCnt;
-				totPage = data.tbi1000List1[0].totPage;
+			if (data.tbi1000List[0] !== undefined) {
+				totCnt = data.tbi1000List[0].totCnt;
+				totPage = data.tbi1000List[0].totPage;
 			}
 			    			
 			firstGrid.setData(
 					{
-				        list: data.tbi1000List1,
+				        list: data.tbi1000List,
 				        page: {
 				            currentPage: gridPage,
 				            pageSize: gridRow,
