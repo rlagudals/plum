@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.plum.sample.mapper.SampleMapper;
 import com.plum.sample.model.TBI1000;
 import com.plum.sample.model.TBI2000;
+import com.plum.sample.model.TBI3000;
 
 import lombok.extern.log4j.Log4j2;
 
@@ -26,5 +27,10 @@ public class SampleService {
 	public List<TBI2000> selectLvlEdu(TBI2000 inputTBI2000) {
 		
 		return sampleMapper.selectLvlEdu(inputTBI2000);
+	}	
+	
+	public List<TBI3000> selectProfile(TBI3000 inputTBI3000) {
+		
+		return sampleMapper.selectProfile(inputTBI3000);
 	}	
 }

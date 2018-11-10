@@ -40,7 +40,7 @@ public class SampleController implements ISampleController {
 		List<TBI1000> list = new ArrayList<TBI1000>();
 		EmpMngVo sampleVo = new EmpMngVo();
 		// 리스트가져와서 담음
-		list = sampleService.selectSample1(inVo.getTbi1000());
+		list = sampleService.selectSample1(inVo.getTbi1000()); 
 		
 		log.info(list.toString());
 		
@@ -63,6 +63,24 @@ public class SampleController implements ISampleController {
 		log.info(lvlEdulist.toString());
 		
 		sampleVo.setTbi2000List(lvlEdulist); 
+		
+		return sampleVo;
+	}
+	
+	@Override
+	public @ResponseBody EmpMngVo profile(@RequestBody EmpMngVo inVo) {
+		
+		log.info(inVo.toString());
+	
+		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
+		List<TBI2000> proList = new ArrayList<TBI2000>();
+		EmpMngVo sampleVo = new EmpMngVo();
+		// 리스트가져와서 담음
+		proList = sampleService.selectLvlEdu(inVo.getTbi2000());
+		
+		log.info(proList.toString());
+		
+		sampleVo.setTbi2000List(proList); 
 		
 		return sampleVo;
 	}

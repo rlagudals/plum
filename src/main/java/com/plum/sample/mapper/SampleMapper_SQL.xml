@@ -83,5 +83,21 @@
 		     , TB_I1000 B
 		 WHERE 1=1
 		   AND A.EMP_NO = B.EMP_NO
-	</select> 
+	</select>
+	
+	<!-- 프로필 -->
+    <select id="selectProfile" resultType="com.plum.sample.model.TBI3000">
+		SELECT A.EMP_NO
+        	 , B.USER_NM
+	         , B.COMP_NM
+	         , B.CLIENT_COMP_NM
+	         , B.PROJ_TITLE
+	         , B.START_DT
+	         , B.END_DT
+	         , B.ASSIGN_TASK
+	      FROM TB_I1000 A
+	         , TB_I3000 B
+	     WHERE 1=1
+	       AND A.EMP_NO = B.EMP_NO
+	</select>  
 </mapper>

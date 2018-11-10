@@ -20,7 +20,6 @@
 		<script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.js"></script>
 </head>
 <script>
-	
 	// 선택된 메뉴에 따라 메인 타이틀이 변경
 	function title() {
 		
@@ -45,7 +44,7 @@
 				<li onclick="common.sample('empmng');">사원관리</li>
 				<li onclick="common.sample('lvledu');">학력관리</a></li>
 				<li onclick="common.sample('3');">자격증관리</a></li>
-				<li onclick="common.sample('4');">직원프로필</a></li>
+				<li onclick="common.sample('profile');">직원프로필</a></li>
 			</ul>
 		</div>
 	</body>

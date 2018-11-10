@@ -22,4 +22,8 @@ public interface ISampleController {
 	// 학력조회
 	@RequestMapping(value = "/sample/lvledu")
 	public EmpMngVo lvledu(EmpMngVo inVo);
+	
+	// 프로필 조회
+	@RequestMapping(value = "/sample/profile")
+	public EmpMngVo profile(EmpMngVo inVo);
 }
