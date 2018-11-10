@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.plum.sample.controller.ISampleController;
 import com.plum.sample.model.EmpMngVo;
 import com.plum.sample.model.TBI1000;
-import com.plum.sample.model.TBI2000;
 import com.plum.sample.service.SampleService;
 
 import lombok.extern.log4j.Log4j2;
@@ -23,16 +22,18 @@ public class SampleController implements ISampleController {
 
 	@Autowired
 	SampleService sampleService;
-		
+	
+	
 	@Override
-	public String sample(@RequestParam String pagenm) {
+	public String sample(@RequestParam String pageno) {
 
-		// pageno : url
-		return "/sample/" + pagenm + ".jsp";
+		return "/sample/sample" + pageno + ".jsp";
 	}
 
 	@Override
-	public @ResponseBody EmpMngVo empmng(@RequestBody EmpMngVo inVo) {
+	public @ResponseBody EmpMngVo sample1( @RequestBody EmpMngVo inVo) {
+		
+		
 		
 		log.info(inVo.toString());
 	
@@ -48,6 +49,7 @@ public class SampleController implements ISampleController {
 		
 		return sampleVo;
 	}
+<<<<<<< HEAD
 	
 	@Override
 	public @ResponseBody EmpMngVo lvledu(@RequestBody EmpMngVo inVo) {
@@ -84,4 +86,7 @@ public class SampleController implements ISampleController {
 		
 		return sampleVo;
 	}
+=======
+
+>>>>>>> refs/remotes/origin/master
 }
