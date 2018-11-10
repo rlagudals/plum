@@ -205,7 +205,7 @@ function search(_gridPage) {
 		<tr>
 			<td><label>사원명</label></td>
 			<td width="5"></td>
-			<td><input type="text" id="txtName" value="박다윤"></td>
+			<td><input type="text" id="txtName"></td>
 			<td width="20"></td>		
 			<td><label>아이디</label></td>
 			<td width="5"></td>
@@ -213,11 +213,11 @@ function search(_gridPage) {
 			<td width="20"></td>		
 			<td><label>조회기간</label></td>
 			<td width="5"></td>
-			<td><input type="text" id="dtFromDt" value="20101010"></td>
+			<td><input type="text" id="dtFromDt"></td>
 			<td width="5"></td>
 			<td><label>~</label></td>
 			<td width="5"></td>
-			<td><input type="text" id="dtToDt" value="20101014"></td>
+			<td><input type="text" id="dtToDt"></td>
 			<td width="20"></td>	
 			<td><button onclick="search(0);">조회</button></td>
 		</tr>

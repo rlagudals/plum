@@ -21,20 +21,15 @@
 		<script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.js"></script>
 
 </head>
-<<<<<<< HEAD
 <script>
 	// 선택된 메뉴에 따라 메인 타이틀이 변경
 	function title() {
 		
 	}
 </script>	
-=======
-	
->>>>>>> refs/remotes/origin/master
 	<body>
 	
-		<div class="index">
-		
+		<div class="index">	
 		<div class="col-xs-12 top">
 			<div class="col-xs-1 top-brand">
 				<a href="#" class="iteyes">sample</a>
@@ -51,16 +46,10 @@
 		</div>
 		<div class="col-xs-2 left">
 			<ul>
-<<<<<<< HEAD
 				<li onclick="common.sample('empmng');">사원관리</li>
 				<li onclick="common.sample('lvledu');">학력관리</a></li>
 				<li onclick="common.sample('3');">자격증관리</a></li>
 				<li onclick="common.sample('profile');">직원프로필</a></li>
-=======
-				<li onclick="common.sample('1');">AX5UI Grid 조회(샘플1)</li>
-				<li onclick="common.sample('2');">AX5UI Grid update(샘플2)</a></li>
-				<li onclick="common.sample('3');">샘플(샘플3)</a></li>
->>>>>>> refs/remotes/origin/master
 			</ul>
 		</div>
 		

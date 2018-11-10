@@ -12,8 +12,7 @@ public class TBI1000 extends CmnModel {
 	private String totCnt;
 	private String totPage;
 	private String entrDt1;
-	private String entrDt2;
-	
+	private String entrDt2;	
 	private String loginId;
 	private String userNm;
 	private String empNo;

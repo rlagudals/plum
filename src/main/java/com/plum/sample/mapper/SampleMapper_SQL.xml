@@ -6,8 +6,7 @@
 <mapper namespace="com.plum.sample.mapper.SampleMapper">
 
 	<!-- 로그인권한조회 -->
-    <select id="selectSample1" resultType="com.plum.sample.model.TBI1000">
-<<<<<<< HEAD
+    <select id="selectSample" resultType="com.plum.sample.model.TBI1000">    
 	SELECT CEIL(A1.TOT_CNT / #{gridRow}) AS TOT_PAGE
 	     , #{gridPage} AS GRID_PAGE
 	     , #{gridRow} AS GRID_ROW
@@ -100,62 +99,5 @@
 	         , TB_I3000 B
 	     WHERE 1=1
 	       AND A.EMP_NO = B.EMP_NO
-	</select>  
-=======
-SELECT CEIL(A1.TOT_CNT / #{gridRow}) AS TOT_PAGE
-     , #{gridPage} AS GRID_PAGE
-     , #{gridRow} AS GRID_ROW
-     , TOT_CNT
-     , LOGIN_ID
-     , USER_NM
-     , EMP_NO
-     , ADDR
-     , FRONT_REG_NO
-     , GENDER
-     , EMAIL
-     , TEL_NUM
-     , EMER_TEL_NUM
-     , ENTR_DT
-     , RESING_DT
-     , DEPT_CD
-     , GRADE_CD
-     , LVL_EDU
-     , MAJOR
-     , MARR_YN
-     , SAL_CLAS
-     , FST_REG_DTTM
-     , FST_RGST_EMP_NO
-     , LST_CHG_DTTM
-     , LST_CHG_EMP_NO
-  FROM(SELECT ROWNUM AS RN
-             , COUNT(1) OVER() AS TOT_CNT
-             , LOGIN_ID
-             , USER_NM
-             , EMP_NO
-             , ADDR
-             , FRONT_REG_NO
-             , GENDER
-             , EMAIL
-             , TEL_NUM
-             , EMER_TEL_NUM
-             , ENTR_DT
-             , RESING_DT     
-             , DEPT_CD
-             , GRADE_CD
-             , LVL_EDU
-             , MAJOR
-             , MARR_YN
-             , SAL_CLAS
-             , FST_REG_DTTM
-             , FST_RGST_EMP_NO
-             , LST_CHG_DTTM
-             , LST_CHG_EMP_NO
-          FROM TB_I1000
-         WHERE 1 = 1 
-         ORDER BY EMP_NO
-         ) A1
- WHERE 1 = 1
-   AND A1.RN BETWEEN #{gridPage} * #{gridRow} + 1 and #{gridPage} * #{gridRow} + #{gridRow} + 1
-    </select> 
->>>>>>> refs/remotes/origin/master
+	</select> 
 </mapper>
