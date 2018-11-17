@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import com.plum.sample.model.TBI1000;
 import com.plum.sample.model.TBI2000;
 import com.plum.sample.model.TBI3000;
+import com.plum.sample.model.TBI4000;
 
 @Mapper
 public interface SampleMapper {
@@ -19,4 +20,7 @@ public interface SampleMapper {
 	
 	// 프로필 조회
 	public List<TBI3000> selectProfile(TBI3000 inputTBI3000);
+	
+	// 자격증 조회
+    public List<TBI4000> selectCertf(TBI4000 inputTBI4000);
 }

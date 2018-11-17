@@ -9,6 +9,7 @@ import com.plum.sample.mapper.SampleMapper;
 import com.plum.sample.model.TBI1000;
 import com.plum.sample.model.TBI2000;
 import com.plum.sample.model.TBI3000;
+import com.plum.sample.model.TBI4000;
 import lombok.extern.log4j.Log4j2;
 
 @Service
@@ -32,5 +33,9 @@ public class SampleService {
 		
 		return sampleMapper.selectProfile(inputTBI3000);
 	}	
-
+	
+	public List<TBI4000> selectCertf(TBI4000 inputTBI4000) {
+		
+		return sampleMapper.selectCertf(inputTBI4000);
+	}	
 }

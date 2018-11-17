@@ -201,7 +201,7 @@ function search(_gridPage) {
 </script>
 <div>
 	<table>
-		<tr height="10" rowspan="17"></tr>
+		<tr height="10" rowspan="17"></tr> 
 		<tr>
 			<td><label>사원명</label></td>
 			<td width="5"></td>

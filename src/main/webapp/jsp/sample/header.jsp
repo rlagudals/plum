@@ -48,7 +48,7 @@
 			<ul>
 				<li onclick="common.sample('empmng');">사원관리</li>
 				<li onclick="common.sample('lvledu');">학력관리</a></li>
-				<li onclick="common.sample('3');">자격증관리</a></li>
+				<li onclick="common.sample('certf');">자격증관리</a></li>
 				<li onclick="common.sample('profile');">직원프로필</a></li>
 			</ul>
 		</div>

@@ -14,6 +14,7 @@ import com.plum.sample.model.EmpMngVo;
 import com.plum.sample.model.TBI1000;
 import com.plum.sample.model.TBI2000;
 import com.plum.sample.model.TBI3000;
+import com.plum.sample.model.TBI4000;
 import com.plum.sample.service.SampleService;
 
 import lombok.extern.log4j.Log4j2;
@@ -97,6 +98,24 @@ public class SampleController implements ISampleController {
 		log.info(proList.toString());
 		
 		sampleVo.setTbi3000List(proList); 
+		
+		return sampleVo;
+	}
+	
+	@Override
+	public @ResponseBody EmpMngVo certf(@RequestBody EmpMngVo inVo) {
+		
+		log.info(inVo.toString());
+	
+		// 서비스 호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
+		List<TBI4000> certfList = new ArrayList<TBI4000>();
+		EmpMngVo sampleVo = new EmpMngVo();
+		// 리스트가져와서 담음
+		certfList = sampleService.selectCertf(inVo.getTbi4000());
+		
+		log.info(certfList.toString());
+		
+		sampleVo.setTbi4000List(certfList); 
 		
 		return sampleVo;
 	}

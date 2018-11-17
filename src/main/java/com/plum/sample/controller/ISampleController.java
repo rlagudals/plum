@@ -26,4 +26,8 @@ public interface ISampleController {
 	// 프로필 조회
 	@RequestMapping(value = "/sample/profile")
 	public EmpMngVo profile(EmpMngVo inVo);
+	
+	// 자격증 조회
+	@RequestMapping(value = "/sample/certf")
+	public EmpMngVo certf(EmpMngVo inVo);
 }

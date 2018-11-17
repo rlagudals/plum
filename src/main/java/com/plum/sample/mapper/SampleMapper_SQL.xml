@@ -100,4 +100,16 @@
 	     WHERE 1=1
 	       AND A.EMP_NO = B.EMP_NO
 	</select> 
+	
+	<!-- 자격증 -->
+    <select id="selectCertf" resultType="com.plum.sample.model.TBI4000">
+	    SELECT A.EMP_NO
+	         , B.USER_NM 
+	         , A.CERTF_TITLE
+	         , A.CERTF_DT
+	      FROM TB_I4000 A
+	         , TB_I1000 B
+	     WHERE 1=1
+	       AND A.EMP_NO = B.EMP_NO 
+	</select> 
 </mapper>
