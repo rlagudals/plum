@@ -6,7 +6,7 @@ import com.plum.cmn.model.TB0000;
 
 public interface IUserRegController {
 	
-	@RequestMapping(value = "/userreg", method = RequestMethod.POST)
+	@RequestMapping(value = "/userreg")
 	public String userreg();
 	
 	// 회원가입 진행

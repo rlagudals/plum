@@ -13,7 +13,7 @@
 		height:300px;	
 	}
 </style>
-<script type="text/javascript" src="/js/common/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="/plum/js/common/jquery-1.12.3.min.js"></script>
 <script>
 $(document).ready(function(){
 	

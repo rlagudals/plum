@@ -5,32 +5,38 @@ common.sample = function (pageNm) {
 	
 };
 /* json data로 화면 이동 */
-common.pageMove = function (i_url, i_data) {
-	
-	
-	var url = i_url;
-	var json_data = {};
-	
-	if(i_data != null){
-		json_data["empNo"] = i_data.empNo;
-	}
-	json_data["url"] = url; 
-	
-	$.ajax({
-		type : "POST",
-		dataType : "json",
-		contentType : "application/json",
-		async : true,
-		data : JSON.stringify(json_data),
-		url : "/page",
-		success : function(data) {
-			location.href = data.url + "?empNo=" + data.empNo ;
-		},
-		error : function(request, status, error) {
-			alert('ajax error');
-		}
-	});	 
+common.pageMove = function (i_url) {
 
+	var url = i_url;
+	location.href = "/plum/sample?pagenm="+ url;
+//	var json_data = {};
+	
+//	if(i_data != null){
+//		json_data["empNo"] = i_data.empNo;
+//	}
+//	json_data["url"] = url; 
+//	
+//	$.ajax({
+//		type : "GET",
+//		dataType : "json",
+//		contentType : "application/json",
+//		async : true,
+//		data : JSON.stringify(json_data),
+//		url : "/plum/sample?pagenm=" + url,
+//		success : function(data) {
+//			location.href = data.url + "?empNo=" + data.empNo ;
+//		},
+//		error : function(request, status, error) {
+//			alert('ajax error');
+//		}
+//	});	 
+
+};
+
+common.testMove = function (i_url) {
+
+	var url = i_url;
+	location.href = "/plum/common?pagenm="+ url;
 };
 
 
