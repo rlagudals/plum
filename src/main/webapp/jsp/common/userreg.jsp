@@ -83,7 +83,7 @@ function fun_idCheck(){
 // 취소
 function fun_regCancel(){
 	alert("작성중인 내용이 삭제됩니다. 회원가입을 취소하시겠습니까?");
-	location.href = "/jsp/common/login.jsp";
+	location.href = "/plum/login";
 }
 </script>
 <body>

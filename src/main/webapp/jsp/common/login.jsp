@@ -38,7 +38,7 @@ $(document).ready(function(){
 					}
 				},
 				error : function(request,status,error){
-					console.log("에러");				
+					console.log("로그인 에러");				
 				},
 			});		
 	});		
