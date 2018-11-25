@@ -116,7 +116,21 @@ function search() {
 </script>
 <div style="height:10px;"></div>
 <div>
-	<button onclick="search();">조회</button>
+	<table>
+		<tr height="10" rowspan="17"></tr> 
+		<tr>
+			<td><label>사원번호</label></td>
+			<td width="5"></td>
+			<td><input type="text" id="txtEmpNo"></td>
+			<td width="18"></td>		
+			<td><label>사원명</label></td>
+			<td width="5"></td>
+			<td><input type="text" id="txtEmpNm"></td>
+			<td width="18"></td>		
+			<td><button onclick="search();">조회</button></td>
+		</tr>
+		<tr height="7" rowspan="17"></tr>
+	</table>
 </div>
 <div style="height:10px;"></div>
 <div data-ax5grid="profile-grid" data-ax5grid-config="{}" style="width:100%; height:600px;"></div>

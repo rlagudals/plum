@@ -4,7 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.plum.sample.mapper.SampleMapper">
-
 	<!-- 로그인권한조회 -->
     <select id="selectSample" resultType="com.plum.sample.model.TBI1000">    
 	SELECT CEIL(A1.TOT_CNT / #{gridRow}) AS TOT_PAGE
@@ -112,4 +111,64 @@
 	     WHERE 1=1
 	       AND A.EMP_NO = B.EMP_NO 
 	</select> 
+		
+    <!-- 신규 직원 등록 -->
+    <insert id="insetEmpMng">    
+		INSERT INTO TB_I1000
+	    (
+	          LOGIN_ID
+	        , USER_NM
+	        , EMP_NO
+	        , ADDR
+	        , FRONT_REG_NO
+	        , GENDER
+	        , EMAIL
+	        , TEL_NUM
+	        , EMER_TEL_NUM
+	        , ENTR_DT
+	        , RESING_DT
+	        , DEPT_CD
+	        , GRADE_CD
+	        , LVL_EDU
+	        , MAJOR
+	        , MARR_YN
+	        , SAL_CLAS
+	        , FST_REG_DTTM
+	        , FST_RGST_EMP_NO
+	        , LST_CHG_DTTM
+	        , LST_CHG_EMP_NO
+	    )
+	    VALUES
+	    (
+	          #{loginId}
+	        , #{userNm}
+	        , #{empNo}
+	        , #{addr}
+	        , #{frontRegNo}
+	        , #{gender}
+	        , #{email}
+	        , #{telNum}
+	        , #{emerTelNum}
+	        , #{entrDt}
+	        , #{resingDt}
+	        , '0'
+	        , NULL
+	        , NULL
+	        , NULL
+	        , NULL
+	        , NULL
+	        , NULL
+	        , SYSDATE
+	        , #{empNo}
+	        , SYSDATE
+	        , #{empNo}
+	        , SYSDATE
+	    )
+	</insert> 
+	
+	<!-- 직원 삭제 -->
+	<delete id="deleteEmpMng"> 
+		DELETE FROM TB_I1000
+  		 WHERE EMP_NO = #{empNo}
+	</delete> 
 </mapper>

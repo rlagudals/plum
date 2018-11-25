@@ -140,7 +140,7 @@ $(document).ready(function () {
 	search(gridPage);	
 });
 
-/*사원정보 조회 */
+/* 사원정보 조회  */
 function search(_gridPage) {
 	
 	//페이지 넘겨받음
@@ -162,7 +162,7 @@ function search(_gridPage) {
 	tbi1000["entrDt1"] = sEntrDt1;
 	tbi1000["entrDt2"] = sEntrDt2;
 	empMngVo["tbi1000"] = tbi1000;
-			
+	
 	$.ajax({
 		type : "POST",
 		dataType : "json",
@@ -194,7 +194,7 @@ function search(_gridPage) {
 				);
 		},
 		error : function(request, status, error) {
-			alert('다시 한 번 입력해주세요 에러에러');
+			alert('다시 한 번 입력해주세요.');
 		}
 	});	
 };	
