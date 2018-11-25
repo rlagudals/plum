@@ -77,10 +77,13 @@ function search() {
 	var tbi2000 = {};
 	var empMngVoList = [];
 
+	var sNo = $("[id=txtEmpNo]").val();
+	var sNm = $("[id=txtEmpNm]").val();
 	//tbi2000["gridPage"] = gridPage;
 	//tbi2000["gridRow"] = gridRow;
+	tbi2000["empNo"] = sNo;
+	tbi2000["userNm"] = sNm;
 	empMngVo["tbi2000"] = tbi2000;
-	
 	
 	$.ajax({
 		type : "POST",

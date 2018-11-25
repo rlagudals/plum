@@ -82,6 +82,12 @@
 		     , TB_I1000 B
 		 WHERE 1=1
 		   AND A.EMP_NO = B.EMP_NO
+		   <if test="empNo != null and empNo != ''">
+            AND A.EMP_NO LIKE '%' || #{empNo} || '%'
+       	   </if>
+       	   <if test="userNm != null and userNm != ''">
+            AND B.USER_NM LIKE '%' || #{userNm} || '%'
+       	   </if>
 	</select>
 	
 	<!-- 프로필 -->
