@@ -1,14 +1,14 @@
 var common= {}; //This is WebSquare JavaScript Marker. Do not remove this line.
 
 common.sample = function (pageNm) {
-	location.href = "/plum/sample?pagenm=" + pageNm;
+	location.href = "/plum/main?pagenm=" + pageNm;
 	
 };
 /* json data로 화면 이동 */
 common.pageMove = function (i_url) {
 
 	var url = i_url;
-	location.href = "/plum/sample?pagenm="+ url;
+	location.href = "/plum/main?pagenm="+ url;
 //	var json_data = {};
 	
 //	if(i_data != null){
