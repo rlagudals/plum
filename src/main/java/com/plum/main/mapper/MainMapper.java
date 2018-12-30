@@ -13,7 +13,7 @@ import com.plum.main.model.TBI4000;
 public interface MainMapper {
 	
 	// 로그인
-	public List<TBI1000> selectSample(TBI1000 inputTBI1000);
+	public List<TBI1000> selectLoginInfo(TBI1000 inputTBI1000);
 
 	// 학력조회
 	public List<TBI2000> selectLvlEdu(TBI2000 inputTBI2000);

@@ -27,7 +27,7 @@ public class MainController implements IManinController {
 	MainService mainService;
 		
 	@Override
-	public String sample(@RequestParam String pagenm) {
+	public String main(@RequestParam String pagenm) {
 
 		return "/main/" + pagenm + ".jsp";
 	}
@@ -57,7 +57,7 @@ public class MainController implements IManinController {
 		List<TBI1000> empmngList = new ArrayList<TBI1000>();
 		EmpMngVo empmng = new EmpMngVo();
 		// 리스트가져와서 담음
-		empmngList = mainService.selectSample(inVo.getTbi1000());
+		empmngList = mainService.selectLoginInfo(inVo.getTbi1000());
 		
 		log.info(empmngList.toString());
 		
