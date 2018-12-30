@@ -28,7 +28,8 @@ public class MainController implements IManinController {
 		
 	@Override
 	public String main(@RequestParam String pagenm) {
-
+		
+		log.debug("===> page name : " + "/main/" + pagenm + ".jsp");
 		return "/main/" + pagenm + ".jsp";
 	}
 
