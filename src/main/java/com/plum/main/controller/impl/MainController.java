@@ -24,12 +24,12 @@ import lombok.extern.log4j.Log4j2;
 public class MainController implements IManinController {
 
 	@Autowired
-	MainService sampleService;
+	MainService mainService;
 		
 	@Override
 	public String sample(@RequestParam String pagenm) {
 
-		return "/sample/" + pagenm + ".jsp";
+		return "/main/" + pagenm + ".jsp";
 	}
 
 	/*
@@ -57,7 +57,7 @@ public class MainController implements IManinController {
 		List<TBI1000> empmngList = new ArrayList<TBI1000>();
 		EmpMngVo empmng = new EmpMngVo();
 		// 리스트가져와서 담음
-		empmngList = sampleService.selectSample(inVo.getTbi1000());
+		empmngList = mainService.selectSample(inVo.getTbi1000());
 		
 		log.info(empmngList.toString());
 		
@@ -75,7 +75,7 @@ public class MainController implements IManinController {
 		List<TBI2000> lvlEdulist = new ArrayList<TBI2000>();
 		EmpMngVo sampleVo = new EmpMngVo();
 		// 리스트가져와서 담음
-		lvlEdulist = sampleService.selectLvlEdu(inVo.getTbi2000());
+		lvlEdulist = mainService.selectLvlEdu(inVo.getTbi2000());
 		
 		log.info(lvlEdulist.toString());
 		
@@ -93,7 +93,7 @@ public class MainController implements IManinController {
 		List<TBI3000> proList = new ArrayList<TBI3000>();
 		EmpMngVo sampleVo = new EmpMngVo();
 		// 리스트가져와서 담음
-		proList = sampleService.selectProfile(inVo.getTbi3000());
+		proList = mainService.selectProfile(inVo.getTbi3000());
 		
 		log.info(proList.toString());
 		
@@ -111,7 +111,7 @@ public class MainController implements IManinController {
 		List<TBI4000> certfList = new ArrayList<TBI4000>();
 		EmpMngVo sampleVo = new EmpMngVo();
 		// 리스트가져와서 담음
-		certfList = sampleService.selectCertf(inVo.getTbi4000());
+		certfList = mainService.selectCertf(inVo.getTbi4000());
 		
 		log.info(certfList.toString());
 		

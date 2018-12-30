@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.plum.sample.mapper.SampleMapper">
+<mapper namespace="com.plum.main.mapper.SampleMapper">
 	<!-- 로그인권한조회 -->
-    <select id="selectSample" resultType="com.plum.sample.model.TBI1000">    
+    <select id="selectSample" resultType="com.plum.main.model.TBI1000">    
 	SELECT CEIL(A1.TOT_CNT / #{gridRow}) AS TOT_PAGE
 	     , #{gridPage} AS GRID_PAGE
 	     , #{gridRow} AS GRID_ROW
@@ -72,7 +72,7 @@
 	</select> 
 	    
     <!-- 학력 -->
-    <select id="selectLvlEdu" resultType="com.plum.sample.model.TBI2000">
+    <select id="selectLvlEdu" resultType="com.plum.main.model.TBI2000">
 		SELECT A.EMP_NO
 		     , B.USER_NM
 		     , A.LVL_EDU
@@ -91,7 +91,7 @@
 	</select>
 	
 	<!-- 프로필 -->
-    <select id="selectProfile" resultType="com.plum.sample.model.TBI3000">
+    <select id="selectProfile" resultType="com.plum.main.model.TBI3000">
 		SELECT A.EMP_NO
         	 , B.USER_NM
 	         , B.COMP_NM
@@ -107,7 +107,7 @@
 	</select> 
 	
 	<!-- 자격증 -->
-    <select id="selectCertf" resultType="com.plum.sample.model.TBI4000">
+    <select id="selectCertf" resultType="com.plum.main.model.TBI4000">
 	    SELECT A.EMP_NO
 	         , B.USER_NM 
 	         , A.CERTF_TITLE
