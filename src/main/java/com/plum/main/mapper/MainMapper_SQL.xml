@@ -31,7 +31,7 @@
 	     , FST_RGST_EMP_NO
 	     , LST_CHG_DTTM
 	     , LST_CHG_EMP_NO
-	  FROM(SELECT ROWNUM AS RN
+	  FROM( SELECT ROWNUM AS RN
 	             , COUNT(1) OVER() AS TOT_CNT
 	             , LOGIN_ID
 	             , USER_NM
@@ -175,6 +175,41 @@
 	<!-- 직원 삭제 -->
 	<delete id="deleteEmpMng"> 
 		DELETE FROM TB_I1000
+  		 WHERE EMP_NO = #{empNo}
+	</delete> 
+	
+	<!-- 학력정보 등록 -->
+	<insert id="insertLvlEdu"> 
+		INSERT INTO TB_I2000
+		(
+		      NO
+		    , EMP_NO
+		    , LVL_EDU
+		    , MAJOR
+		    , DOBL_MAJOR
+		    , FST_REG_DTTM 
+		    , FST_RGST_EMP_NO 
+		    , LST_CHG_DTTM 
+		    , LST_CHG_EMP_NO 
+		)
+		VALUES
+		(
+		      (SELECT COUNT(NO) FROM TB_I2000) + 1
+		    , #{empNo}
+		    , #{userNm}
+		    , #{lvlEdu}
+		    , #{major}
+		    , #{doblMajor}
+		    , SYSDATE
+		    , #{empNo}
+		    , SYSDATE
+		    , #{empNo}
+		)
+	</insert>
+	
+	<!-- 학력정보 삭제 -->
+	<delete id="deleteLvlEdu"> 
+		DELETE FROM TB_I2000
   		 WHERE EMP_NO = #{empNo}
 	</delete> 
 </mapper>
