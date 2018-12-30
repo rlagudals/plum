@@ -1,4 +1,4 @@
-package com.plum.sample.model;
+package com.plum.main.model;
 
 import java.util.List;
 

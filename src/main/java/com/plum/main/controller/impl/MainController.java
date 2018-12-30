@@ -1,4 +1,4 @@
-package com.plum.sample.controller.impl;
+package com.plum.main.controller.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,22 +9,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.plum.sample.controller.ISampleController;
-import com.plum.sample.model.EmpMngVo;
-import com.plum.sample.model.TBI1000;
-import com.plum.sample.model.TBI2000;
-import com.plum.sample.model.TBI3000;
-import com.plum.sample.model.TBI4000;
-import com.plum.sample.service.SampleService;
+import com.plum.main.controller.IManinController;
+import com.plum.main.model.EmpMngVo;
+import com.plum.main.model.TBI1000;
+import com.plum.main.model.TBI2000;
+import com.plum.main.model.TBI3000;
+import com.plum.main.model.TBI4000;
+import com.plum.main.service.MainService;
 
 import lombok.extern.log4j.Log4j2;
 
 @Controller
 @Log4j2
-public class SampleController implements ISampleController {
+public class MainController implements IManinController {
 
 	@Autowired
-	SampleService sampleService;
+	MainService sampleService;
 		
 	@Override
 	public String sample(@RequestParam String pagenm) {

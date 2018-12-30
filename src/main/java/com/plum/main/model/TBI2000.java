@@ -1,4 +1,4 @@
-package com.plum.sample.model;
+package com.plum.main.model;
 
 import com.plum.cmn.model.CmnModel;
 

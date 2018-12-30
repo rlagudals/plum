@@ -1,13 +1,13 @@
-package com.plum.sample.controller;
+package com.plum.main.controller;
 
 import java.util.HashMap;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.plum.sample.model.EmpMngVo;
+import com.plum.main.model.EmpMngVo;
 
-public interface ISampleController {
+public interface IManinController {
 
 	/*
 	 * 사원관리화면으로 이동하기 위한 컨트롤러
