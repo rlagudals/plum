@@ -24,7 +24,7 @@ public interface ICmnController {
 	/*
 	 * 사원관리화면으로 이동하기 위한 컨트롤러
 	 */
-	@RequestMapping(value = "/aa")
+	@RequestMapping(value = "/index")
 	public String index();
 
 

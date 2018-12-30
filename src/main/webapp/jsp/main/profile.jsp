@@ -98,7 +98,7 @@ function search() {
 		contentType : "application/json",
 		async : true,
 		data : JSON.stringify(empMngVo),
-		url : "/plum/sample/profile",
+		url : "/plum/main/profile",
 		success : function(data) {
 			profileGrid.setData(
 					{

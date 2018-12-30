@@ -49,7 +49,7 @@ public class CmnController implements ICmnController {
 
 	@Override
 	public String pageMove(@RequestParam String pn) {
-		log.debug("111111111111111111111111111111111");
+		log.debug("==> PageMove : " + pn);
 		// TODO Auto-generated method stub
 		return pn;
 	}

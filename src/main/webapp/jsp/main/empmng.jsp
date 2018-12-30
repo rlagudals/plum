@@ -169,7 +169,7 @@ function search(_gridPage) {
 		contentType : "application/json",
 		async : true,
 		data : JSON.stringify(empMngVo),
-		url : "/plum/sample/empmng",
+		url : "/plum/main/empmng",
 		success : function(data) {
 			
 			console.log(data);

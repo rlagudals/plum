@@ -105,7 +105,7 @@ function search() {
 		contentType : "application/json",
 		async : true,
 		data : JSON.stringify(certfVo),
-		url : "/plum/sample/certf",
+		url : "/plum/main/certf",
 		success : function(data) {
 			firstGrid.setData(
 					{

@@ -91,7 +91,7 @@ function search() {
 		contentType : "application/json",
 		async : true,
 		data : JSON.stringify(empMngVo),
-		url : "/plum/sample/lvledu",
+		url : "/plum/main/lvledu",
 		success : function(data) {
 			firstGrid.setData(
 					{

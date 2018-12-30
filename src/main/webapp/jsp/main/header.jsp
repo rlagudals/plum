@@ -32,7 +32,7 @@
 		<div class="index">	
 		<div class="col-xs-12 top">
 			<div class="col-xs-1 top-brand">
-				<a href="#" class="iteyes">PLUM</a>
+				<a href="#" class="iteyes">PLUM 2019</a>
 			</div>
 			<div class="col-xs-1 top-info">
 <%-- 				${topinfo['emp_no']} / ${topinfo['emp_name']} --%>
@@ -46,10 +46,11 @@
 		</div>
 		<div class="col-xs-2 left">
 			<ul>
-				<li onclick="common.sample('empmng');">사원관리</li>
-				<li onclick="common.sample('lvledu');">학력관리</a></li>
-				<li onclick="common.sample('certf');">자격증관리</a></li>
-				<li onclick="common.sample('profile');">직원프로필</a></li>
+				<li onclick="common.main('empmng');">사원관리</li>
+				<li onclick="common.main('lvledu');">학력관리</a></li>
+				<li onclick="common.main('certf');">자격증관리</a></li>
+				<li onclick="common.main('profile');">직원프로필</a></li>
+				<li onclick="common.main('askboard');">Q&A</a></li>
 			</ul>
 		</div>
 		
