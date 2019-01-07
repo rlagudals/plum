@@ -14,8 +14,8 @@ public interface IManinController {
 	 */	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main(String pagenm);
-	
-	// 사원리스트를 가져오기
+
+	// 사원조회
 	@RequestMapping(value = "/main/empmng")
 	public EmpMngVo empmng(EmpMngVo inVo);
 	

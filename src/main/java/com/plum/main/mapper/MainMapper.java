@@ -12,8 +12,8 @@ import com.plum.main.model.TBI4000;
 @Mapper
 public interface MainMapper {
 	
-	// 로그인
-	public List<TBI1000> selectLoginInfo(TBI1000 inputTBI1000);
+	// 사원조회
+	public List<TBI1000> selectEmpMng(TBI1000 inputTBI1000);
 
 	// 학력조회
 	public List<TBI2000> selectLvlEdu(TBI2000 inputTBI2000);

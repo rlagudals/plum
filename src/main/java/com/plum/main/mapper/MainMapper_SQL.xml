@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.plum.main.mapper.MainMapper">
-	<!-- 로그인권한조회 -->
-    <select id="selectLoginInfo" resultType="com.plum.main.model.TBI1000">    
+	<!-- Main(사원관리) 조회 -->
+    <select id="selectEmpMng" resultType="com.plum.main.model.TBI1000">    
 	SELECT CEIL(A1.TOT_CNT / #{gridRow}) AS TOT_PAGE
 	     , #{gridPage} AS GRID_PAGE
 	     , #{gridRow} AS GRID_ROW
