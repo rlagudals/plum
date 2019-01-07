@@ -27,7 +27,4 @@ public interface ICmnController {
 	@RequestMapping(value = "/index")
 	public String index();
 
-
-	
-
 }

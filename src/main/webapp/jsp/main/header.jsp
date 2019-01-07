@@ -32,7 +32,7 @@
 		<div class="index">	
 		<div class="col-xs-12 top">
 			<div class="col-xs-1 top-brand">
-				<a href="#" class="iteyes">PLUM 2019</a>
+				<a href="#" class="iteyes">PLUM</a>
 			</div>
 			<div class="col-xs-1 top-info">
 <%-- 				${topinfo['emp_no']} / ${topinfo['emp_name']} --%>
