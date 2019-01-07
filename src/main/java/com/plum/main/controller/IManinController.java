@@ -5,7 +5,7 @@ import java.util.HashMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.plum.main.model.EmpMngVo;
+import com.plum.main.model.PlumVo;
 
 public interface IManinController {
 
@@ -17,17 +17,17 @@ public interface IManinController {
 
 	// 사원조회
 	@RequestMapping(value = "/main/empmng")
-	public EmpMngVo empmng(EmpMngVo inVo);
+	public PlumVo empmng(PlumVo inVo);
 	
 	// 학력조회
 	@RequestMapping(value = "/main/lvledu")
-	public EmpMngVo lvledu(EmpMngVo inVo);
+	public PlumVo lvledu(PlumVo inVo);
 	
 	// 프로필 조회
 	@RequestMapping(value = "/main/profile")
-	public EmpMngVo profile(EmpMngVo inVo);
+	public PlumVo profile(PlumVo inVo);
 	
 	// 자격증 조회
 	@RequestMapping(value = "/main/certf")
-	public EmpMngVo certf(EmpMngVo inVo);
+	public PlumVo certf(PlumVo inVo);
 }

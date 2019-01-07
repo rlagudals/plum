@@ -43,4 +43,4 @@ public class MainService {
 		
 		return mainMapper.selectCertf(inputTBI4000);
 	}	
-}
+}  

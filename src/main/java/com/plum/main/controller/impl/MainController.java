@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.plum.main.controller.IManinController;
-import com.plum.main.model.EmpMngVo;
+import com.plum.main.model.PlumVo;
 import com.plum.main.model.TBI1000;
 import com.plum.main.model.TBI2000;
 import com.plum.main.model.TBI3000;
@@ -51,12 +51,12 @@ public class MainController implements IManinController {
     */
 
 	@Override
-	public @ResponseBody EmpMngVo empmng(@RequestBody EmpMngVo inVo) {
+	public @ResponseBody PlumVo empmng(@RequestBody PlumVo inVo) {
 		log.info(inVo.toString());
 		
 		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
 		List<TBI1000> empmngList = new ArrayList<TBI1000>();
-		EmpMngVo empmng = new EmpMngVo();
+		PlumVo empmng = new PlumVo();
 		// 리스트가져와서 담음
 		empmngList = mainService.selectEmpMng(inVo.getTbi1000());
 		
@@ -68,13 +68,13 @@ public class MainController implements IManinController {
 	}
 	
 	@Override
-	public @ResponseBody EmpMngVo lvledu(@RequestBody EmpMngVo inVo) {
+	public @ResponseBody PlumVo lvledu(@RequestBody PlumVo inVo) {
 		
 		log.info(inVo.toString());
 	
 		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
 		List<TBI2000> lvlEdulist = new ArrayList<TBI2000>();
-		EmpMngVo sampleVo = new EmpMngVo();
+		PlumVo sampleVo = new PlumVo();
 		// 리스트가져와서 담음
 		lvlEdulist = mainService.selectLvlEdu(inVo.getTbi2000());
 		
@@ -86,13 +86,13 @@ public class MainController implements IManinController {
 	}
 	
 	@Override
-	public @ResponseBody EmpMngVo profile(@RequestBody EmpMngVo inVo) {
+	public @ResponseBody PlumVo profile(@RequestBody PlumVo inVo) {
 		
 		log.info(inVo.toString());
 	
 		// 서비스호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
 		List<TBI3000> proList = new ArrayList<TBI3000>();
-		EmpMngVo sampleVo = new EmpMngVo();
+		PlumVo sampleVo = new PlumVo();
 		// 리스트가져와서 담음
 		proList = mainService.selectProfile(inVo.getTbi3000());
 		
@@ -104,13 +104,13 @@ public class MainController implements IManinController {
 	}
 	
 	@Override
-	public @ResponseBody EmpMngVo certf(@RequestBody EmpMngVo inVo) {
+	public @ResponseBody PlumVo certf(@RequestBody PlumVo inVo) {
 		
 		log.info(inVo.toString());
 	
 		// 서비스 호출과 리턴을 위한 서비스 Vo와 화면 리턴을 위한 컨트롤러 out Vo 선언
 		List<TBI4000> certfList = new ArrayList<TBI4000>();
-		EmpMngVo sampleVo = new EmpMngVo();
+		PlumVo sampleVo = new PlumVo();
 		// 리스트가져와서 담음
 		certfList = mainService.selectCertf(inVo.getTbi4000());
 		

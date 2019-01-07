@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Data;
 
 @Data     
-public class EmpMngVo {
+public class PlumVo {
 	
 	// 사원관리
 	private TBI1000 tbi1000;
