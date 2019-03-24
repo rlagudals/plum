@@ -61,14 +61,10 @@ $(document).ready(function () {
 	        align: "center"
 	    },
 		body: { 
- 			/*
+ 			
 			onDBLClick: function(){
- 				common.pageMove("empmng/empinfo",this.list[this.dindex]);
+ 				common.pageMove("profile/profilereg",this.list[this.dindex]);
  			},
- 	 	    onClick: function(){
-            
-        	},
-        	*/
 		}
 	});
 	
@@ -131,7 +127,7 @@ function search() {
 			<td width="5"></td>
 			<td><input type="text" id="txtEmpNm"></td>
 			<td width="18"></td>		
-			<td><button onclick="search();">조회</button></td>
+			<td><button onclick="javascript:search();">조회</button></td>
 		</tr>
 		<tr height="7" rowspan="17"></tr>
 	</table>

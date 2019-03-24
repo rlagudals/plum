@@ -1,8 +1,7 @@
 var common= {}; //This is WebSquare JavaScript Marker. Do not remove this line.
 
 common.sample = function (pageNm) {
-	location.href = "/plum/main?pagenm=" + pageNm;
-	
+	location.href = "/plum/main?pagenm=" + pageNm;	
 };
 /* json data로 화면 이동 */
 common.pageMove = function (i_url) {
