@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>summervaction</name>
+	<name>plum</name>
 	<description>스프링프레임워크 스터디</description>
 
 	<parent>

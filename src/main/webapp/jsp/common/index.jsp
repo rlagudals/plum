@@ -6,18 +6,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>첫화면</title>
 </head>
-<script type="text/javascript" src="/js/common/jquery-1.12.3.min.js"></script>
+<!--<script type="text/javascript" src="/js/common/jquery-1.12.3.min.js">-->
+<script type="text/javascript">
 
+function fn_login() {	
+	debugger;
+	location.href = "/jsp/common/login.jsp";
+}
+
+
+</script>
+<!-- 
 <script>
 	function fn_login() {	
+		debugger;
 		location.href = "/jsp/common/login.jsp";
 	}
 </script>
+ -->
 <body>
 <table> 
 	<tr>
 		<td>
-			<input type="button" value="로그인 화면 이동" onclick="fn_login();"></input>		
+			<input type="button" value="로그인 화면 이동" onclick="javascript:fn_login();"></input>		
 		</td>	
 </table>
 </body>

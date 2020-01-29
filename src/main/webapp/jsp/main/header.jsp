@@ -19,7 +19,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5core/master/dist/ax5core.js"></script>
 		<script type="text/javascript" src="https://cdn.rawgit.com/ax5ui/ax5ui-grid/master/dist/ax5grid.js"></script>
-
 </head>
 <script>
 	// 선택된 메뉴에 따라 메인 타이틀이 변경
@@ -35,7 +34,7 @@
 				<a href="#" class="iteyes">PLUM</a>
 			</div>
 			<div class="col-xs-1 top-info">
-<%-- 				${topinfo['emp_no']} / ${topinfo['emp_name']} --%>
+			<%-- ${topinfo['emp_no']} / ${topinfo['emp_name']} --%>
 			</div>
 			<div class="col-xs-1"></div>
 			<div class="col-xs-1"></div>
