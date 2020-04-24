@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.plum.cmn.mapper.UserRegMapper">
     <insert id="insertUserInfo">
-    INSERT INTO TB_M0000 
-    (
-          LOGIN_ID
-        , EMP_NO
-        , LOGIN_PWD
-        , USER_NM
-        , FRONT_REG_NO
-        , FST_REG_DTTM
-    )
-    VALUES
-    (
-          #{loginId}
-        , NULL
-        , #{loginPwd}
-        , #{userNm}
-        , #{frontRegNo}
-        , SYSDATE
-     )
+	     INSERT INTO TB_USER_LOGIN_INFO
+		 ( 
+		       SEQ_NO
+		     , LOGIN_ID
+		     , EMP_NO
+		     , LOGIN_PWD
+		     , USER_NM
+		     , FRONT_REG_NO
+		     , FST_REG_DTTM
+		 )
+		 SELECT NVL(MAX(SEQ_NO),0)+1 AS SEQ_NO
+		      , #{loginId}
+		      , NULL
+		      , #{loginPwd}
+		      , #{userNm}
+		      , #{frontRegNo}
+		      , SYSDATE
+		   FROM TB_USER_LOGIN_INFO
+		  WHERE 1=1 
     </insert>
     
     <!-- 아이디 중복체크 -->
     <select id="getIdCheck" resultType="com.plum.cmn.model.TB0000">
-    SELECT *
-      FROM TB_M0000
-     WHERE 1=1
-       AND LOGIN_ID = #{loginId}
+	    SELECT *
+	      FROM TB_USER_LOGIN_INFO
+	     WHERE 1=1
+	       AND LOGIN_ID = #{loginId}
     </select>     
 </mapper>

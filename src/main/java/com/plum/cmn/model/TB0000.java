@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class TB0000 extends CmnModel{
-	
+	//commit test
 	private String loginId;
 	private String loginPwd;
 	private String userNm;
