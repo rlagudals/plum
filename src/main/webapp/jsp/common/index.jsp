@@ -1,34 +1,25 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Ã¹È­¸é</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ì²«í™”ë©´</title>
 </head>
 <!--<script type="text/javascript" src="/js/common/jquery-1.12.3.min.js">-->
 <script type="text/javascript">
 
 function fn_login() {	
-	debugger;
+	
 	location.href = "/jsp/common/login.jsp";
 }
 
+</script>
 
-</script>
-<!-- 
-<script>
-	function fn_login() {	
-		debugger;
-		location.href = "/jsp/common/login.jsp";
-	}
-</script>
- -->
 <body>
 <table> 
 	<tr>
 		<td>
-			<input type="button" value="·Î±×ÀÎ È­¸é ÀÌµ¿" onclick="javascript:fn_login();"></input>		
+			<input type="button" value="ë¡œê·¸ì¸ í™”ë©´ ì´ë™" onclick="javascript:fn_login();"></input>		
 		</td>	
 </table>
 </body>
