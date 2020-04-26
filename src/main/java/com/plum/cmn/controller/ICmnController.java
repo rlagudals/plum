@@ -5,8 +5,6 @@ import java.util.HashMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.plum.cmn.model.TB0000;
-
 public interface ICmnController {
 
 	/*

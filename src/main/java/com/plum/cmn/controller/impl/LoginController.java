@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.plum.cmn.controller.ILoginController;
-import com.plum.cmn.model.TB0000;
+import com.plum.cmn.model.*;
 import com.plum.cmn.service.LoginService;
 
 import lombok.extern.log4j.Log4j2;
@@ -35,28 +35,28 @@ public class LoginController implements ILoginController {
 	}
 
 	@Override
-	public @ResponseBody TB0000 loginProc(@RequestBody TB0000 inputTB0000) { 
+	public @ResponseBody UserLoginInfo loginProc(@RequestBody UserLoginInfo userInfo) { 
 
-		TB0000 returnTB0000 = new TB0000();
+		UserLoginInfo returnUserInfo = new UserLoginInfo();
 
 		
 		log.debug("loginProc 호출");
-		log.debug("인풋파라메터 " + inputTB0000.toString());
+		log.debug("인풋파라메터 " + userInfo.toString());
 		
-		returnTB0000 = loginService.loginProc(inputTB0000);
+		returnUserInfo = loginService.loginProc(userInfo);
 
-		if (returnTB0000 != null) {
+		if (returnUserInfo != null) {
 			
-			returnTB0000.setSccYn("Y");
-			returnTB0000.setResultMsg("로그인성공");
+			returnUserInfo.setSccYn("Y");
+			returnUserInfo.setResultMsg("로그인성공");
 			
 		} else {
-			returnTB0000 = new TB0000();
-			returnTB0000.setSccYn("N");
-			returnTB0000.setResultMsg("로그인실패");
+			returnUserInfo = new UserLoginInfo();
+			returnUserInfo.setSccYn("N");
+			returnUserInfo.setResultMsg("로그인실패");
 		}
 
-		return returnTB0000;
+		return returnUserInfo;
 	}
 	
 	@Override

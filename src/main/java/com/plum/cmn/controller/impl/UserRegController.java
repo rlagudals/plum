@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.plum.cmn.controller.ILoginController;
 import com.plum.cmn.controller.IUserRegController;
-import com.plum.cmn.model.TB0000;
+import com.plum.cmn.model.*;
 import com.plum.cmn.service.LoginService;
 import com.plum.cmn.service.UserRegService;
 
@@ -29,19 +29,19 @@ public class UserRegController implements IUserRegController {
 
 	// 회원가입
 	@Override
-	public @ResponseBody TB0000 userRegProc(@RequestBody TB0000 inputTB0000) {
+	public @ResponseBody UserLoginInfo userRegProc(@RequestBody UserLoginInfo userInfo) {
 
 		int insertCnt = 0;
-		TB0000 returnNewInfo = new TB0000();
+		UserLoginInfo returnNewInfo = new UserLoginInfo();
 
-		log.debug("신규등록 데이터 " + inputTB0000.toString());
+		log.debug("신규등록 데이터 " + userInfo.toString());
 
 		// insert 쿼리실행
-		insertCnt = userRegService.userRegProc(inputTB0000);
+		insertCnt = userRegService.userRegProc(userInfo);
 		log.info("insert 건수 => " + insertCnt);
 		
 		if (insertCnt > 0) {
-			returnNewInfo.setUserNm(inputTB0000.getUserNm());
+			returnNewInfo.setUserNm(userInfo.getUserNm());
 			returnNewInfo.setSccYn("Y");
 			returnNewInfo.setResultMsg("insert 성공");
 
@@ -55,16 +55,12 @@ public class UserRegController implements IUserRegController {
 
 	// 아이디 중복 체크
 	@Override
-	public @ResponseBody TB0000 idCheckProc(@RequestBody TB0000 inputId) {
+	public @ResponseBody UserLoginInfo idCheckProc(@RequestBody UserLoginInfo inputId) {
 
-		TB0000 reCheckId = new TB0000();
+		UserLoginInfo reCheckId = new UserLoginInfo();
 		
-		log.debug("---> idCheckProc 호출 : " + inputId.toString());
-
 		reCheckId = userRegService.idCheckProc(inputId);
 		
-		log.debug("-->★★★★★★★ controller : " + reCheckId);
-
 		if (reCheckId == null) {
 			
 			reCheckId.setSccYn("Y");

@@ -1,11 +1,9 @@
 package com.plum.cmn.controller;
 
-import java.util.HashMap;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.plum.cmn.model.TB0000;
+import com.plum.cmn.model.*;
 
 public interface ILoginController {
 
@@ -22,7 +20,7 @@ public interface ILoginController {
 	 * 사용자의 아이디와 패스워드가 입력되어다면 로그인 프로세스를 진행한다.
 	 */
 	@RequestMapping(value = "/loginProc")
-	public TB0000 loginProc(TB0000 inputTB0000);	
+	public UserLoginInfo loginProc(UserLoginInfo inputInfo);	
 
 	/*
 	 * 회원가입을 위해서 팝업창을 띄운다.

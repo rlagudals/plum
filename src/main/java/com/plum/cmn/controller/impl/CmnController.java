@@ -1,10 +1,7 @@
 package com.plum.cmn.controller.impl;
 
-import java.io.FileInputStream;
 import java.util.HashMap;
-import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,9 +14,6 @@ import lombok.extern.log4j.Log4j2;
 @Controller
 @Log4j2
 public class CmnController implements ICmnController {
-
-//	@Autowired
-//	private CmnService cmnService;
 
 	// jsp 페이지 이동을 위한 페이지 컨트롤러
 	@Override

@@ -4,7 +4,7 @@
 <mapper namespace="com.plum.cmn.mapper.LoginMapper">
 
 	<!-- 로그인권한조회 -->
-    <select id="getLoginAuth" resultType="com.plum.cmn.model.TB0000">
+    <select id="getLoginAuth" resultType="com.plum.cmn.model.UserLoginInfo">
 	SELECT LOGIN_ID
 	     , LOGIN_PWD
 	     , USER_NM
