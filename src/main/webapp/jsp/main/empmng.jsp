@@ -223,5 +223,5 @@ function search(_gridPage) {
 		<tr height="10" rowspan="17"></tr>
 	</table>
 </div>
-<div data-ax5grid="first-grid" data-ax5grid-config="{}" style="width:100%; height:600px;"></div>
+<div data-ax5grid="first-grid" data-ax5grid-config="{}" style="width:100%; height:700px;"></div>
 </html>
