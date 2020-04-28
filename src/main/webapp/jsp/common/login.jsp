@@ -87,7 +87,7 @@ body {
           transform: translate(0, -25%) scale(1);
   opacity: 1;
 }
-.form-group {
+.form-group{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -297,7 +297,7 @@ body {
 $(document).ready(function(){
 	
 	$("#btnLogin").click(function(){	
-		
+	
 		var loginId = $("[id=loginId]").val();
 		var loginPwd = $("[id=loginPwd]").val();
 		
@@ -307,7 +307,7 @@ $(document).ready(function(){
 		 $.ajax({
 				type : "POST",
 				dataType : "json",
-				contentType: 'application/json; charset=UTF-8', 
+				contentType: 'application/json; charset=UTF-8',
 				url : "/plum/loginProc",
 				data : JSON.stringify(inputData),
 				success : function(data){		
@@ -316,7 +316,7 @@ $(document).ready(function(){
 					console.log(data.resultMsg);
 					
 					if(data.sccYn == "Y"){
-						alert(inputData.loginId + "님 환영합니다");
+						alert(data.userNm + "님 환영합니다");
 						common.pageMove("empmng");
 					}else{
 						alert("사용자가 가입안되있거나 비밀번호가 잘못되었습니다");
@@ -325,33 +325,26 @@ $(document).ready(function(){
 				error : function(request,status,error){
 					console.log("로그인 에러");				
 				},
-			});		
-	});		
+		});	
+	});
 });
+
+function fn_enterkey() {
+    if (window.event.keyCode == 13) {
+
+         // 엔터키가 눌렸을 때 실행할 내용
+         fn_login();
+    }
+}
 
 // 회원가입
 function fn_userReg() {
+	
 	location.href = "/plum/userreg";
 }
 </script>
 
 <body>
-<!--  
-<h1>Login</h1>
-<div>
-	<table> 
-		<tr>
-			<td><input class="signUpInput" type="text" id="loginId"></input></td>
-		</tr>
-		<tr>
-			<td><input class="signUpInput" type="password" id="loginPwd"></input></td>
-		</tr>
-		<tr>
-			<td class="signUpButton" id="btnLogin">로그인</td>
-			<td class="signUpButton" id="btnUserReg" onclick="fn_userReg();">회원가입</td>	
-		</tr>
-</table>
-</div>-->
 <!-- Form-->
 <div class="form">
   <div class="form-toggle"></div>
@@ -363,18 +356,18 @@ function fn_userReg() {
       <form>
         <div class="form-group">
           <label for="username">USER ID</label>
-          <input type="text" id="loginId" name="loginId" required="required"/>
+          <input type="text" id="loginId" name="loginId" required="required" value="dypark" readonly/>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="loginPwd" name="loginPwd" required="required"/>
+          <input type="password" id="loginPwd" name="loginPwd" required="required" value="1234" readonly/>
         </div>
         <div class="form-group">
           <label class="form-remember">
-            <input type="checkbox"/>Remember Me
-          </label><a href="#" class="form-recovery">Forgot Password?</a>
+            <input type="checkbox"/>Remember Me</label>
+            <a href="#" class="form-recovery" onclick="fn_userReg();">User Register</a>
         </div>
-        <div class="form-group">
+        <div>
           <button id="btnLogin">Log In</button>
         </div>
       </form>

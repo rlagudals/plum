@@ -1,17 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>È¸¿ø°¡ÀÔ</title>
+<meta charset="UTF-8">
+	<title>íšŒì›ê°€ì…</title>
 </head>
 <style>
-	div 
-	{ 
-		width:700px;
-		height:300px;	
-	}
+div{ 
+	width:700px;
+	height:300px;	
+}
 </style>
 <script type="text/javascript" src="/plum/js/common/jquery-1.12.3.min.js"></script>
 <script>
@@ -40,20 +38,20 @@ $(document).ready(function(){
 			success : function(data){
 
 				if(data.sccYn == "Y"){
-					alert(inputInfo.userNm + "´Ô È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+					alert(inputInfo.userNm + "ë‹˜ íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
 				}else{
-					alert("½Å±Ôµî·ÏÀÌ Á¤»óÀûÀ¸·Î Ã³¸®µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+					alert("ì‹ ê·œë“±ë¡ì´ ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
 				}
 			},
 			error : function(request,status,error){
-				console.log("½Å±Ôµî·Ï ¿¡·¯");			
+				console.log("ì‹ ê·œë“±ë¡ ì—ëŸ¬");			
 			}			
 			
 		});		
 	});		
 });
 
-// ID Áßº¹Ã¼Å©
+// ID ì¤‘ë³µì²´í¬
 function fun_idCheck(){	
 		
 	var loginId = $('[id=txtLoginId]').val();		
@@ -69,20 +67,20 @@ function fun_idCheck(){
 				console.log(data);
 				
 				if(data.sccYn == "Y"){
-					alert(inputData.loginId + "´Â »ç¿ë °¡´ÉÇÑ ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+					alert(inputData.loginId + "ëŠ” ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë”” ì…ë‹ˆë‹¤.");
 				}else{
-					alert("Áßº¹µÈ ¾ÆÀÌµğ°¡ Á¸ÀçÇÕ´Ï´Ù. ¾ÆÀÌµğ¸¦ ´Ù½Ã ¼³Á¤ÇØÁÖ¼¼¿ä.");
+					alert("ì¤‘ë³µëœ ì•„ì´ë””ê°€ ì¡´ì¬í•©ë‹ˆë‹¤. ì•„ì´ë””ë¥¼ ë‹¤ì‹œ ì„¤ì •í•´ì£¼ì„¸ìš”.");
 				}
 			},
 			error : function(request,status,error){
-				console.log("¿¡·¯");				
+				console.log("ì—ëŸ¬");				
 			}			
 		});		
 }
 
-// Ãë¼Ò
+// ì·¨ì†Œ
 function fun_regCancel(){
-	alert("ÀÛ¼ºÁßÀÎ ³»¿ëÀÌ »èÁ¦µË´Ï´Ù. È¸¿ø°¡ÀÔÀ» Ãë¼ÒÇÏ½Ã°Ú½À´Ï±î?");
+	alert("ì‘ì„±ì¤‘ì¸ ë‚´ìš©ì´ ì‚­ì œë©ë‹ˆë‹¤. íšŒì›ê°€ì…ì„ ì·¨ì†Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 	location.href = "/plum/login";
 }
 </script>
@@ -91,22 +89,22 @@ function fun_regCancel(){
 	<table>
 	<tr height="3"></tr>
 	<tr>
-	    <td style="font-size:10pt; font-family:'µ¸¿ò';">ÀÌ¸§</td>
+	    <td style="font-size:10pt; font-family:'ë‹ì›€';">ì´ë¦„</td>
 		<td><input type="text" id="txtUserNm"></td>		
 	</tr>
 	<tr>
-	    <td style="font-size:10pt; font-family:'µ¸¿ò';">¾ÆÀÌµğ</td>
+	    <td style="font-size:10pt; font-family:'ë‹ì›€';">ì•„ì´ë””</td>
 		<td><input type="text" id="txtLoginId"></td>
 		<td width="5"></td>
-		<td><input type="button" id="btnIdCheck" onclick="fun_idCheck()" value="¾ÆÀÌµğ Áßº¹ Ã¼Å©"></td>
+		<td><input type="button" id="btnIdCheck" onclick="fun_idCheck()" value="ì•„ì´ë”” ì¤‘ë³µ ì²´í¬"></td>
 	</tr>
 	<tr>
-	    <td style="font-size:10pt; font-family:'µ¸¿ò';">ºñ¹Ğ¹øÈ£</td>
+	    <td style="font-size:10pt; font-family:'ë‹ì›€';">ë¹„ë°€ë²ˆí˜¸</td>
 		<td><input type="password" id="txtLoginPwd"></td>		
 	</tr>
 	<tr>
-		<td><input type="button" id="btnReg" value="°¡ÀÔÇÏ±â">&nbsp;</td>
-		<td><input type="button" id="btnCancel" onclick="fun_regCancel()" value="&nbsp;&nbsp;&nbsp;Ãë ¼Ò&nbsp;&nbsp;&nbsp;"></td>
+		<td><input type="button" id="btnReg" value="ê°€ì…í•˜ê¸°">&nbsp;</td>
+		<td><input type="button" id="btnCancel" onclick="fun_regCancel()" value="&nbsp;&nbsp;&nbsp;ì·¨ ì†Œ&nbsp;&nbsp;&nbsp;"></td>
 	</tr>
 	</table>
 </div>
