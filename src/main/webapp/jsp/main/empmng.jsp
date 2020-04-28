@@ -5,7 +5,7 @@
 <script type="text/javascript">
 var firstGrid = {};
 var gridPage = 0;
-var gridRow = 19;
+var gridRow = 24;
 
 $(document).ready(function () {
 	/* dash(-)로 구분되는 날짜 포맷터 */
@@ -198,7 +198,7 @@ function search(_gridPage) {
 	});	
 };	
 </script>
-<div>
+<div style="margin:10px 10px 10px 10px;">
 	<table>
 		<tr height="10" rowspan="17"></tr> 
 		<tr>
@@ -218,10 +218,10 @@ function search(_gridPage) {
 			<td width="5"></td>
 			<td><input type="text" id="dtToDt"></td>
 			<td width="20"></td>	
-			<td><button onclick="search(0);">조회</button></td>
+			<td><button onclick="search(0);" class="btn btn-primary btn-sm">조회</button></td>
 		</tr>
 		<tr height="10" rowspan="17"></tr>
 	</table>
 </div>
-<div data-ax5grid="first-grid" data-ax5grid-config="{}" style="width:100%; height:700px;"></div>
+<div data-ax5grid="first-grid" data-ax5grid-config="{}" style="width:100%; height:700px; float: none; margin:10px 10px 10px 10px;"></div>
 </html>

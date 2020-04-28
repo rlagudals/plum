@@ -123,7 +123,7 @@ function search() {
 			<td width="5"></td>
 			<td><input type="text" id="txtEmpNm"></td>
 			<td width="18"></td>		
-			<td><button onclick="search();">조회</button></td>
+			<td><button onclick="search();" class="btn btn-primary">조회</button></td>
 		</tr>
 		<tr height="7" rowspan="17"></tr>
 	</table>
