@@ -19,7 +19,7 @@ public interface ILoginController {
 	/*
 	 * 사용자의 아이디와 패스워드가 입력되어다면 로그인 프로세스를 진행한다.
 	 */
-	@RequestMapping(value = "/loginProc")
+	@RequestMapping(value = "/loginProc", method = RequestMethod.POST)
 	public UserLoginInfo loginProc(UserLoginInfo inputInfo);	
 
 	/*

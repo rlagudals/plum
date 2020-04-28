@@ -23,7 +23,7 @@ public class UserRegController implements IUserRegController {
 
 	@Override
 	public String userreg() {
-
+	
 		return "/common/userreg.jsp";
 	}
 

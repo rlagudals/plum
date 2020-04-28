@@ -38,10 +38,8 @@ public class LoginController implements ILoginController {
 	public @ResponseBody UserLoginInfo loginProc(@RequestBody UserLoginInfo userInfo) { 
 
 		UserLoginInfo returnUserInfo = new UserLoginInfo();
-
 		
 		log.debug("loginProc 호출");
-		log.debug("인풋파라메터 " + userInfo.toString());
 		
 		returnUserInfo = loginService.loginProc(userInfo);
 
@@ -88,5 +86,4 @@ public class LoginController implements ILoginController {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }
